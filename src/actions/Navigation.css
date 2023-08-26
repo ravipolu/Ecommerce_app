@@ -1,0 +1,193 @@
+
+.active {
+    transform: translateY(0);
+}
+
+.deactive {
+    transform: translateY(-100vmax);
+}
+
+
+.menuBar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer; 
+    z-index: 5;  
+}
+
+.navigateMainDiv {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: white; */
+    align-items: center;
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 5;
+    scroll-behavior: auto;
+    overflow-y: none;
+    top: 0;
+}
+
+
+.cancelDiv {
+    position: absolute;
+    z-index: 5;
+    left: 20px;
+    top: 20px;
+    height: fit-content;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.cancelDiv > svg {
+    font-size : 44px;
+}
+
+.navigateMainDiv > div{
+    height: 100vh;
+    
+}
+
+.navigateMainDiv > div:hover {
+    color: tomato;
+}
+
+.logo {
+    width: 25%;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+    box-sizing: border-box;
+    transition: all 0.4s ease 0;
+}
+
+.logo > img {
+    width: 15vmax;
+    height: 15vmax;
+    margin: auto auto auto auto;
+    transition: all 0s ease;
+    animation: shimmer 0.5s linear;
+}
+
+.homeDiv {
+    width: 15%;
+    text-align: center;
+    position: fixed;
+    left: 25%;
+    display: flex;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 0.8s ease 0s;
+}
+
+.navigateMainDiv > div > a {
+    height: fit-content;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.navigateMainDiv > div > a:hover {
+    color: tomato;
+} 
+
+.homeDiv > a {
+    margin: auto 0 auto 0;
+    transition: all 0.5s ease 0s;
+    animation: Link 1s linear;
+}
+
+.productDiv {
+    width: 15%;
+    text-align: center;
+    position: fixed;
+    left: 40%;
+    display: flex;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 1.2s ease 0s;
+}
+
+.productDiv > a {
+    margin: auto 0 auto 0;
+    transition: all 0.5s ease 0s;
+    animation: Link 1.5s linear;
+}
+
+.contactDiv {
+    width: 15%;
+    text-align: center;
+    position: fixed;
+    left: 55%;
+    display: flex;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 1.6s ease 0s;
+}
+
+.contactDiv > a {
+    margin: auto 0 auto 0;
+    transition: all 0.5s ease 0s;
+    animation: Link 2s linear;
+}
+
+.aboutDiv {
+    width: 15%;
+    text-align: center;
+    position: fixed;
+    left: 70%;
+    display: flex;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 2s ease 0s;
+}
+
+.aboutDiv > a {
+    margin: auto 0 auto 0;
+    transition: all 0.5s ease 0s;
+    animation: Link 2.5s linear;
+}
+
+.userDiv {
+    width: 15%;
+    text-align: center;
+    color: tomato;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 85%;
+    display: flex;
+    padding-right: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 2.4s ease 0s;
+}
+
+.userDiv > svg {
+    margin: auto 0 auto 0;
+    transition: all 0.5s ease 0s;
+    animation: Link 3s linear;
+}
+
+.userDiv > svg:hover {
+    cursor: pointer;
+    color: chocolate;
+}
+
+
+
+
+@keyframes shimmer {
+    0%{transform: translateX(-100vw)}
+    100%{transform: translateX(0)}
+}
+
+@keyframes Link {
+    0%{transform: translateY(-100vw)}
+    100%{transform: translateY(0)}
+}
