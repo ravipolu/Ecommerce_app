@@ -18,7 +18,7 @@ import axios from "axios";
 
 const Shipping = ({setStripeApiKey}) => {
 
-    const base_url = "https://ecommerceappserver-n4oq.onrender.com" // "http://localhot:4000"
+    const base_url = "https://ecommerceappserver-n4oq.onrender.com" // "http://localhot:4000"   {withCredentials: true}
     const dispatch= useDispatch();
     const alert =useAlert();
     const history=useNavigate();
@@ -35,7 +35,7 @@ const Shipping = ({setStripeApiKey}) => {
     const [phoneNo, setPhoneNo] = useState(shippingInfo.phoneNo)
 
     async function getStripeApiKey() {
-        const { data } = await axios.get(`${base_url}/api/v1/stripeapikey`,{withCredentials: true});
+        const { data } = await axios.get(`${base_url}/api/v1/stripeapikey`);
     
         setStripeApiKey(data.stripeApiKey);
         // console.log(data.stripeApiKey)
