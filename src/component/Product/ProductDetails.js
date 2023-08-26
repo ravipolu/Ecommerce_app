@@ -96,10 +96,6 @@ const ProductDetails = () => {
 
         dispatch(getProductDetails(id))
 
-        if(product.stock === 0){
-            setQuantity(0)
-        }
-
     }, [dispatch, id, error, alert, reviewError, success])
 
 
@@ -144,7 +140,7 @@ const ProductDetails = () => {
                                 <div className="detailBlock-3-1">
                                     <div className="detailBlock-3-1-1">
                                         <button onClick={decreaseQuantity}>-</button>
-                                        <input readOnly value={quantity} type="number" />
+                                        <input readOnly value={product.stock === 0 ? "0" : quantity} type="number" />
                                         <button onClick={increaseQuantity}>+</button>
                                     </div>{" "}
                                     <button disabled={product.stock < 1 ? true : false} onClick={addToCartHandler}>Add to Cart</button>
