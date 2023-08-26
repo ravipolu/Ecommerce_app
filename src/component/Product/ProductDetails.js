@@ -96,6 +96,10 @@ const ProductDetails = () => {
 
         dispatch(getProductDetails(id))
 
+        if(product.stock === 0){
+            setQuantity(0)
+        }
+
     }, [dispatch, id, error, alert, reviewError, success])
 
 
