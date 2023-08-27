@@ -105,9 +105,8 @@ export const updateOrder= (id,order) => async(dispatch) => {
             header: { "Content-Type": "application/json" },
             withCredentials: true
         }
-        console.log(id)
-        console.log("hiiii")
-        const { data } = await axios.put(`${base_url}/api/v1/admin/update/${id}}`, order, config);
+        
+        const { data } = await axios.put(`${base_url}/api/v1/admin/update/${id}`, order, config);
 
         dispatch({type: UPDATE_ORDER_SUCCESS, payload: data.success});
     }catch(error){
